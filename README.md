@@ -24,6 +24,8 @@ When I give you a benchmark name or topic, propose a short starter draft and ask
 Start by helping me define what model behavior this personal benchmark should examine, what it does not test, the first 1-3 policies, and the first 3-5 smoke scenarios.
 ```
 
+Starter repos also include `AGENTS.md`. If your agent reads repo-local instructions automatically, you can begin with only a benchmark name and topic.
+
 The starter repo is here: [dayhaysoos/personal-benchmark-starter](https://github.com/dayhaysoos/personal-benchmark-starter).
 
 ## Framework-Only Start
