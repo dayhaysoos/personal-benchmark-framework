@@ -29,6 +29,18 @@ For the first question, prefer this shape:
 - `runs/`
 - `reports/`
 
+## Stage Gate
+
+Before creating scenario files, get author acceptance on:
+
+- benchmark lens
+- what the benchmark does not test
+- `scenario_set_version`
+- initial policies
+- initial glossary terms
+- scenario tags
+- claim boundary
+
 ## Quality Bar
 
 Do not ask the author for credentials. Ask for their benchmark lens.

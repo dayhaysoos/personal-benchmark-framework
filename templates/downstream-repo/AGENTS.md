@@ -29,6 +29,36 @@ Use this as the starting lens, or what would you change?
 - Do not invent the author's benchmark lens, policies, scenario judgments, candidate annotations, scores, or report claims.
 - If any judgment is unclear, ask the benchmark author.
 - Prefer accept/edit prompts over blank-template prompts when enough context exists.
+- Work in stage order: benchmark lens, repo-level domain pack, scenarios, runs, reports.
+- Do not author scenario files until the benchmark lens, scenario set version, at least one policy, initial glossary terms, and scenario tags are drafted and accepted.
 - Keep v1 candidate-action only.
 - Keep model outputs JSON-only.
 - Agents are helpers in v1, not benchmark targets.
+
+## Stage Gates
+
+### Stage 1: Benchmark Lens
+
+Produce an accept/edit draft for what the benchmark tests and does not test.
+
+Do not move on until the author accepts or edits the lens.
+
+### Stage 2: Domain Pack
+
+Draft repo-level artifacts before scenarios:
+
+- `eval-card.md` benchmark lens and `not_testing`
+- `policies.md` initial policies
+- `glossary.md` initial terms
+- `scenario_set_version`
+- core and domain-specific scenario tags
+
+Do not write scenario files during this stage unless the author explicitly asks.
+
+### Stage 3: Smoke Scenarios
+
+Only after Stage 2 is accepted, draft 3-5 smoke scenarios using the existing scenario template.
+
+### Stage 4: Runs And Reports
+
+Only after scenarios are accepted, help run models, capture raw outputs, score results, and draft reports.

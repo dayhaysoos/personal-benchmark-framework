@@ -35,11 +35,46 @@ If the author gave almost no domain context, ask:
 9. Ask the author to confirm or correct scores.
 10. Produce an HTML report only after review status is clear.
 
+## Stage Gates
+
+Follow the stages in order. Do not skip ahead just because the next artifact is easy to draft.
+
+### Stage 1: Benchmark Lens
+
+Produce an accept/edit draft for:
+
+- what the benchmark tests
+- what it does not test
+- the initial claim boundary
+
+Do not move on until the author accepts or edits this lens.
+
+### Stage 2: Domain Pack
+
+Before authoring scenario files, draft and get acceptance on:
+
+- `eval-card.md` benchmark lens and `not_testing`
+- `policies.md` initial policies
+- `glossary.md` initial terms
+- `scenario_set_version`
+- core and domain-specific scenario tags
+
+Do not write scenario files in Stage 2 unless the author explicitly asks.
+
+### Stage 3: Smoke Scenarios
+
+Only after Stage 2 is accepted, create 3-5 smoke scenarios using the existing scenario template.
+
+### Stage 4: Runs And Reports
+
+Only after scenarios are accepted, run models, capture raw outputs, score results, and draft reports.
+
 ## Required Agent Behaviors
 
 - Interview one question at a time.
 - Provide a recommended answer when making design decisions.
 - Prefer accept/edit prompts over blank-form prompts when enough context exists.
+- Respect the stage gates; do not introduce undefined policy IDs, glossary terms, scenario tags, or scenario set versions inside scenarios.
 - Keep scenarios candidate-action only for v1.
 - Keep model output JSON-only.
 - Separate prompt-facing scenario data from author annotations.
@@ -52,6 +87,7 @@ If the author gave almost no domain context, ask:
 Stop and ask the author when:
 
 - a policy is undefined
+- a scenario depends on a policy, glossary term, tag, or scenario set version that has not been accepted
 - a candidate action's validity is unclear
 - a trap or weak option lacks a reason
 - scoring requires subjective judgment
