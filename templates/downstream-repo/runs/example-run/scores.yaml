@@ -1,0 +1,16 @@
+run_id: example-run
+scenario_set_version: "2026-07-v1"
+scores:
+  - scenario_id: domain-0001
+    model: provider/model
+    review_status: agent_drafted # agent_drafted | human_confirmed
+    scores:
+      format: pass
+      answerability: pass
+      primary_action: pass
+      avoid_reasons: pass
+      policy_fit: pass
+      uncertainty: pass
+      unsupported_claims: pass
+    failures: []
+    reviewer_notes: ""

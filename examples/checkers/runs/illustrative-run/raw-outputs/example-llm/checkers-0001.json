@@ -1,0 +1,41 @@
+{
+  "scenario_id": "checkers-0001",
+  "model": "example-llm",
+  "runner": "fabricated",
+  "illustrative_only": true,
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Illustrative prompt omitted for brevity."
+      }
+    ],
+    "parameters": {
+      "temperature": 0,
+      "web_access": false,
+      "fallbacks": false
+    }
+  },
+  "response": {
+    "raw_text": "{\"answerability\":\"answerable\",\"primary_action\":\"take_forced_capture\",\"acceptable_alternatives\":[],\"avoid\":{\"quiet_safe_move\":\"Capture is mandatory, so this quiet move is illegal.\",\"random_waiting_move\":\"Capture is mandatory, so unrelated waiting moves are illegal.\"},\"reasoning\":\"The supplied rule says capture is forced, so the legal material-safe choice is to take it.\",\"risk_note\":\"\",\"uncertainty\":{\"level\":\"low\",\"notes\":[]}}",
+    "parsed_json": {
+      "answerability": "answerable",
+      "missing_information": [],
+      "primary_action": "take_forced_capture",
+      "acceptable_alternatives": [],
+      "avoid": {
+        "quiet_safe_move": "Capture is mandatory, so this quiet move is illegal.",
+        "random_waiting_move": "Capture is mandatory, so unrelated waiting moves are illegal."
+      },
+      "reasoning": "The supplied rule says capture is forced, so the legal material-safe choice is to take it.",
+      "risk_note": "",
+      "uncertainty": {
+        "level": "low",
+        "notes": []
+      }
+    },
+    "usage": null,
+    "provider_metadata": null
+  },
+  "timestamp": "2026-07-06T00:00:00Z"
+}

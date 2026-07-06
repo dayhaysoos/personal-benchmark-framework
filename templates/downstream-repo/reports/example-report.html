@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Benchmark Report</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #151515;
+        --muted: #666;
+        --line: #d8d8d8;
+        --bg: #fbfaf8;
+        --panel: #fff;
+        --accent: #0f766e;
+        --warn: #9f5b00;
+        --bad: #a11212;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 16px/1.5 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 48px 24px 72px;
+      }
+      h1, h2, h3 {
+        line-height: 1.15;
+      }
+      h1 {
+        font-size: 40px;
+        margin: 0 0 8px;
+      }
+      h2 {
+        margin-top: 40px;
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+      .meta {
+        color: var(--muted);
+      }
+      .draft {
+        border: 1px solid var(--warn);
+        background: #fff7e6;
+        padding: 12px 14px;
+        margin: 24px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background: var(--panel);
+      }
+      th, td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #f0efec;
+      }
+      code, pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      details {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 12px 14px;
+        margin: 12px 0;
+      }
+      .pass { color: var(--accent); font-weight: 700; }
+      .partial { color: var(--warn); font-weight: 700; }
+      .fail { color: var(--bad); font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Personal Benchmark Report</h1>
+      <p class="meta">Scenario set: 2026-07-v1 · Run: example-run · Review status: agent_drafted</p>
+
+      <div class="draft">
+        Draft report: scores are agent-drafted and are not benchmark results until human confirmed.
+      </div>
+
+      <h2>Summary</h2>
+      <p>This report compares model behavior against the benchmark author's judgment standard for the listed scenario set.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Attempted</th>
+            <th>Passed</th>
+            <th>Partial</th>
+            <th>Failed</th>
+            <th>Common failure modes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>provider/model</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>None in this illustrative report.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Scenario Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>provider/model</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>domain-0001</td>
+            <td><span class="pass">pass</span></td>
+            <td>Correctly selected the strong policy-fit action and rejected the critical trap.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Limitations</h2>
+      <ul>
+        <li>This report reflects the benchmark author's judgment standard.</li>
+        <li>This template is illustrative and not a meaningful model benchmark by itself.</li>
+        <li>Manual UI runs are not reportable benchmark results.</li>
+      </ul>
+
+      <h2>Raw Outputs</h2>
+      <details>
+        <summary>provider/model · domain-0001</summary>
+        <pre>{
+  "answerability": "answerable",
+  "primary_action": "safe_action",
+  "acceptable_alternatives": [],
+  "avoid": {
+    "risky_trap": "Conflicts with the conservative policy."
+  },
+  "reasoning": "The safe action preserves the stated constraint while avoiding the trap.",
+  "risk_note": "",
+  "uncertainty": {
+    "level": "low",
+    "notes": []
+  }
+}</pre>
+      </details>
+    </main>
+  </body>
+</html>

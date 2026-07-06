@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toy Checkers Example Report</title>
+    <style>
+      :root {
+        --ink: #171717;
+        --muted: #666;
+        --line: #d9d7d2;
+        --bg: #fbfaf8;
+        --panel: #fff;
+        --accent: #0f766e;
+        --warn: #9f5b00;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--bg);
+        font: 16px/1.5 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      }
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 24px 72px;
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 1.1;
+        margin: 0 0 8px;
+      }
+      h2 {
+        border-top: 1px solid var(--line);
+        margin-top: 40px;
+        padding-top: 24px;
+      }
+      .meta, .note {
+        color: var(--muted);
+      }
+      .notice {
+        border: 1px solid var(--warn);
+        background: #fff7e6;
+        padding: 12px 14px;
+        margin: 24px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--panel);
+      }
+      th, td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #f0efec;
+      }
+      details {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 12px 14px;
+        margin: 12px 0;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      .pass { color: var(--accent); font-weight: 700; }
+      .partial { color: var(--warn); font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Toy Checkers Example Report</h1>
+      <p class="meta">Scenario set: checkers-example-2026-07-v1 · Run: illustrative-run · Model: example-llm</p>
+
+      <div class="notice">
+        Illustrative only. Outputs are fabricated to show report structure and are not a meaningful model benchmark.
+      </div>
+
+      <h2>Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Attempted</th>
+            <th>Passed</th>
+            <th>Partial</th>
+            <th>Failed</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>example-llm</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>One vague reject reason on the greedy-capture trap.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Scenario Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Result</th>
+            <th>Failure modes</th>
+            <th>Reviewer notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>checkers-0001</td>
+            <td><span class="pass">pass</span></td>
+            <td>None</td>
+            <td>Correctly respected forced capture.</td>
+          </tr>
+          <tr>
+            <td>checkers-0002</td>
+            <td><span class="partial">partial</span></td>
+            <td>missed_critical_trap, minor</td>
+            <td>Rejected greedy capture, but the reason did not mention immediate recapture.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Claim Boundary</h2>
+      <p>This report only demonstrates how a personal benchmark report can be structured. It does not compare real models.</p>
+
+      <h2>Raw Outputs</h2>
+      <details>
+        <summary>example-llm · checkers-0001</summary>
+        <pre>{
+  "answerability": "answerable",
+  "primary_action": "take_forced_capture",
+  "acceptable_alternatives": [],
+  "avoid": {
+    "quiet_safe_move": "Capture is mandatory, so this quiet move is illegal.",
+    "random_waiting_move": "Capture is mandatory, so unrelated waiting moves are illegal."
+  },
+  "reasoning": "The supplied rule says capture is forced, so the legal material-safe choice is to take it.",
+  "risk_note": "",
+  "uncertainty": {
+    "level": "low",
+    "notes": []
+  }
+}</pre>
+      </details>
+      <details>
+        <summary>example-llm · checkers-0002</summary>
+        <pre>{
+  "answerability": "answerable",
+  "primary_action": "safe_developing_move",
+  "acceptable_alternatives": ["passive_back_move"],
+  "avoid": {
+    "greedy_capture": "Too risky for material-safe play."
+  },
+  "reasoning": "The safe developing move fits the policy and avoids overcommitting.",
+  "risk_note": "The passive move is safe but gives up initiative.",
+  "uncertainty": {
+    "level": "low",
+    "notes": []
+  }
+}</pre>
+      </details>
+    </main>
+  </body>
+</html>

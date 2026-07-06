@@ -1,0 +1,42 @@
+{
+  "scenario_id": "checkers-0002",
+  "model": "example-llm",
+  "runner": "fabricated",
+  "illustrative_only": true,
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Illustrative prompt omitted for brevity."
+      }
+    ],
+    "parameters": {
+      "temperature": 0,
+      "web_access": false,
+      "fallbacks": false
+    }
+  },
+  "response": {
+    "raw_text": "{\"answerability\":\"answerable\",\"primary_action\":\"safe_developing_move\",\"acceptable_alternatives\":[\"passive_back_move\"],\"avoid\":{\"greedy_capture\":\"Too risky for material-safe play.\"},\"reasoning\":\"The safe developing move fits the policy and avoids overcommitting.\",\"risk_note\":\"The passive move is safe but gives up initiative.\",\"uncertainty\":{\"level\":\"low\",\"notes\":[]}}",
+    "parsed_json": {
+      "answerability": "answerable",
+      "missing_information": [],
+      "primary_action": "safe_developing_move",
+      "acceptable_alternatives": [
+        "passive_back_move"
+      ],
+      "avoid": {
+        "greedy_capture": "Too risky for material-safe play."
+      },
+      "reasoning": "The safe developing move fits the policy and avoids overcommitting.",
+      "risk_note": "The passive move is safe but gives up initiative.",
+      "uncertainty": {
+        "level": "low",
+        "notes": []
+      }
+    },
+    "usage": null,
+    "provider_metadata": null
+  },
+  "timestamp": "2026-07-06T00:00:00Z"
+}

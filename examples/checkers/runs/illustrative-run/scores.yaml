@@ -1,0 +1,33 @@
+run_id: illustrative-run
+scenario_set_version: "checkers-example-2026-07-v1"
+scores:
+  - scenario_id: checkers-0001
+    model: example-llm
+    review_status: human_confirmed
+    scores:
+      format: pass
+      answerability: pass
+      primary_action: pass
+      avoid_reasons: pass
+      policy_fit: pass
+      uncertainty: pass
+      unsupported_claims: pass
+    failures: []
+    reviewer_notes: "Illustrative fabricated output."
+
+  - scenario_id: checkers-0002
+    model: example-llm
+    review_status: human_confirmed
+    scores:
+      format: pass
+      answerability: pass
+      primary_action: pass
+      avoid_reasons: partial
+      policy_fit: pass
+      uncertainty: pass
+      unsupported_claims: pass
+    failures:
+      - mode: missed_critical_trap
+        severity: minor
+        note: "Output avoided the greedy capture but the reject reason was too vague."
+    reviewer_notes: "Illustrative fabricated output."

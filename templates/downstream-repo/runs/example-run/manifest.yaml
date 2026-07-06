@@ -1,0 +1,26 @@
+run_id: example-run
+run_date: "YYYY-MM-DD"
+scenario_set_version: "2026-07-v1"
+agent_operator: null
+model_runner: openrouter
+runner_type: direct_model_api
+reportable: true
+output_mode: prompted_json # prompted_json | structured_api
+profile:
+  temperature: 0
+  top_p: 1
+  seed: if_supported
+  stream: false
+  web_access: false
+  fallbacks: false
+  max_tokens: 1200
+models:
+  - requested_model: provider/model
+    selected_provider: null
+    selected_model: null
+metadata_required:
+  - raw_request
+  - raw_response
+  - usage
+  - provider_metadata
+raw_output_path: raw-outputs/
