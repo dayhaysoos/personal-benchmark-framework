@@ -6,6 +6,26 @@ The project is for personal benchmarks: benchmark authors define the situations,
 
 ## Quick Start
 
+Create a new benchmark repo from the starter:
+
+```bash
+gh repo create my-benchmark --template dayhaysoos/personal-benchmark-starter --public --clone
+```
+
+Then copy this prompt into your preferred agent from inside the new benchmark repo:
+
+```text
+Use this repository as a downstream personal LLM benchmark repo.
+
+Use https://github.com/dayhaysoos/personal-benchmark-framework as the methodology source. Interview me one question at a time. I am the benchmark author. Do not invent my benchmark lens, policies, scenario judgments, candidate annotations, scores, or report claims.
+
+Start by helping me define what model behavior this personal benchmark should examine, what it does not test, the first 1-3 policies, and the first 3-5 smoke scenarios.
+```
+
+The starter repo is here: [dayhaysoos/personal-benchmark-starter](https://github.com/dayhaysoos/personal-benchmark-starter).
+
+## Framework-Only Start
+
 Copy this prompt into your preferred agent:
 
 ```text
@@ -16,7 +36,7 @@ Then follow:
 
 1. Read [docs/positioning.md](docs/positioning.md).
 2. Use [agent-playbooks/bootstrap-agent.md](agent-playbooks/bootstrap-agent.md).
-3. Create a downstream repo using [templates/downstream-repo/README.md](templates/downstream-repo/README.md).
+3. Create a downstream repo using [templates/downstream-repo/README.md](templates/downstream-repo/README.md), or use the starter repo above.
 4. Start with 3-5 smoke scenarios before running a larger benchmark.
 
 ## What This Is
