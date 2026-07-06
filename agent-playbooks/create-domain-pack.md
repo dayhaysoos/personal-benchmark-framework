@@ -16,7 +16,7 @@ Ask these one at a time. When the author already gave enough context, draft a li
 
 For the first question, prefer this shape:
 
-> Recommended starting lens: this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and the author's policies. Use this, or what should change?
+> Recommended starting lens: this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and the author's policies, while rejecting invalid options, plausible traps, and unsupported assumptions. Use this, or what should change?
 
 ## Files To Create
 

@@ -16,7 +16,7 @@ Keep first-run friction low. If the author already named a benchmark or domain, 
 
 Recommended first question:
 
-> I think this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate actions, and the author's policies. Should we use that as the starting lens, or what would you change?
+> I think this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and the author's policies, while rejecting invalid options, plausible traps, and unsupported assumptions. Should we use that as the starting lens, or what would you change?
 
 If the author gave almost no domain context, ask:
 

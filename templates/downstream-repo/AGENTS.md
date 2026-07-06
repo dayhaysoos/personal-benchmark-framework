@@ -19,7 +19,7 @@ Example response shape:
 
 ```text
 Recommended starting lens:
-This benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and your policies.
+This benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and your policies, while rejecting invalid options, plausible traps, and unsupported assumptions.
 
 Use this as the starting lens, or what would you change?
 ```

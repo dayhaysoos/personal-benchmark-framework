@@ -21,6 +21,8 @@ Use https://github.com/dayhaysoos/personal-benchmark-framework as the methodolog
 
 When I give you a benchmark name or topic, propose a short starter draft and ask me to accept or edit it instead of asking me to fill a blank template.
 
+That starter draft should include both choosing behavior and rejection behavior: choosing from supplied facts/candidate action IDs/policies while rejecting invalid options, plausible traps, and unsupported assumptions.
+
 Start by helping me define what model behavior this personal benchmark should examine, what it does not test, the first 1-3 policies, and the first 3-5 smoke scenarios.
 ```
 
