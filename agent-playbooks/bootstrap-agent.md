@@ -12,7 +12,13 @@ Ask the author whenever a candidate action, annotation, policy definition, score
 
 Ask one question at a time. Do not jump into scenario files until the benchmark frame is clear.
 
+Keep first-run friction low. If the author already named a benchmark or domain, propose a short starter draft and ask them to accept or edit it. Do not make them fill a template-shaped sentence from scratch unless there is not enough information to draft one.
+
 Recommended first question:
+
+> I think this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate actions, and the author's policies. Should we use that as the starting lens, or what would you change?
+
+If the author gave almost no domain context, ask:
 
 > What model behavior do you want this personal benchmark to examine?
 
@@ -33,6 +39,7 @@ Recommended first question:
 
 - Interview one question at a time.
 - Provide a recommended answer when making design decisions.
+- Prefer accept/edit prompts over blank-form prompts when enough context exists.
 - Keep scenarios candidate-action only for v1.
 - Keep model output JSON-only.
 - Separate prompt-facing scenario data from author annotations.

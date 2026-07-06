@@ -19,6 +19,8 @@ Use this repository as a downstream personal LLM benchmark repo.
 
 Use https://github.com/dayhaysoos/personal-benchmark-framework as the methodology source. Interview me one question at a time. I am the benchmark author. Do not invent my benchmark lens, policies, scenario judgments, candidate annotations, scores, or report claims.
 
+When I give you a benchmark name or topic, propose a short starter draft and ask me to accept or edit it instead of asking me to fill a blank template.
+
 Start by helping me define what model behavior this personal benchmark should examine, what it does not test, the first 1-3 policies, and the first 3-5 smoke scenarios.
 ```
 
@@ -30,6 +32,8 @@ Copy this prompt into your preferred agent:
 
 ```text
 Use this repository as a framework for creating a personal LLM benchmark. Interview me one question at a time. Treat me as the benchmark author. Do not invent author judgments, candidate annotations, policy definitions, or scoring decisions. Help me create a downstream benchmark repo using the templates and playbooks here.
+
+When I give you a benchmark name or topic, propose a short starter draft and ask me to accept or edit it instead of asking me to fill a blank template.
 ```
 
 Then follow:

@@ -4,7 +4,7 @@ Use this playbook to create the first domain files in a downstream personal benc
 
 ## Interview
 
-Ask these one at a time:
+Ask these one at a time. When the author already gave enough context, draft a likely answer and ask for accept/edit instead of asking a blank question.
 
 1. What behavior should the benchmark examine?
 2. What domain or recurring task does this benchmark cover?
@@ -13,6 +13,10 @@ Ask these one at a time:
 5. What kinds of candidate actions will scenarios use?
 6. What common mistakes should scenarios expose?
 7. What claims should reports be allowed to make?
+
+For the first question, prefer this shape:
+
+> Recommended starting lens: this benchmark tests whether an LLM can [draft behavior] using supplied facts, candidate action IDs, and the author's policies. Use this, or what should change?
 
 ## Files To Create
 
